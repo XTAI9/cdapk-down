@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Cloudreve Android</title>
+  <meta name="description" content="Cloudreve 自托管云盘的原生 Android 客户端 1.10.0：回收站/后台任务/远程下载/WebDAV 全量，多账号隔离与 SSE 实时同步。">
+  <meta name="keywords" content="Cloudreve, Android, 客户端, 网盘, 自托管, 1.10.0, WebDAV, SSE">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#eef2ff">
+  <link rel="icon" type="image/svg+xml" href="assets/img/icon.svg">
+
+  <!-- 社交分享卡片 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cloudreve Android 1.10.0">
+  <meta property="og:description" content="Cloudreve Android 1.10.0 全量上线：回收站与后台任务、远程离线下载、WebDAV 独立管理，10 种存储策略与全格式预览。">
+  <meta property="og:site_name" content="Cloudreve Android">
+
+  <!-- 安全策略：零外联、零网络请求、禁止被嵌入 -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'none';
+    base-uri 'none';
+    connect-src 'none';
+    font-src 'self';
+    form-action 'none';
+    object-src 'none';
+    img-src 'self' data:;
+    script-src 'self';
+    style-src 'self' 'unsafe-inline';
+  ">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <!-- 同步加载：main.js 在首次绘制前应用主题（防闪烁）；DOM 渲染在 DOMContentLoaded 后进行 -->
+  <script src="config.js"></script>
+  <script src="assets/js/main.js"></script>
+</head>
+<body>
+  <noscript>
+    <p style="position:fixed;inset:0;display:grid;place-items:center;text-align:center;padding:24px;background:#eef2ff;color:#171a2c;z-index:99">
+      本站需要启用 JavaScript 才能正常渲染，请开启后刷新页面。
+    </p>
+  </noscript>
+
+  <!-- 极光背景光斑 -->
+  <div class="bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+  </div>
+
+  <!-- ================= 顶部导航 ================= -->
+  <header class="topbar glass container">
+    <a class="brand" href="#top" aria-label="Cloudreve Android">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+      </span>
+      Cloudreve <em style="font-style:normal;opacity:.7">Android</em>
+    </a>
+    <nav class="nav-links" aria-label="导航">
+      <a href="#features" data-i18n="nav.features"></a>
+      <a href="#download" data-i18n="nav.download"></a>
+      <a href="#faq" data-i18n="nav.faq"></a>
+    </nav>
+    <div class="top-actions">
+      <button class="icon-btn" id="theme-btn" type="button" data-i18n-aria="a11y.dark" aria-label=""></button>
+      <button class="icon-btn" id="lang-btn" type="button" aria-label="Language"><span class="lang-code">中</span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ================= Hero ================= -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-icon glass" aria-hidden="true">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+          </div>
+        </div>
+
+        <p class="hero-keyword glass"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.keyword"></span></p>
+
+        <a id="whats-new" class="whats-new glass reveal" href="#download" aria-label="What’s new in 1.10.0" style="--cr-so: 1.6%">
+          <span class="whats-new-badge" data-i18n="whatsNew.badge"></span>
+          <span class="whats-new-title"></span>
+          <span class="whats-new-arrow" data-i18n="whatsNew.more"></span>
+        </a>
+
+        <h1>
+          <span data-i18n="hero.title1"></span><br>
+          <span class="grad-text" data-i18n="hero.title2"></span>
+        </h1>
+
+        <p class="hero-tagline">
+          <span data-i18n="hero.tagline"></span>
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#download">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+            <span data-i18n="hero.dl"></span>
+          </a>
+          <a class="btn btn-ghost" href="#features">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+            <span data-i18n="hero.more"></span>
+          </a>
+        </div>
+
+        <p class="hero-hint" id="hero-hint" aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <!-- ================= 数字条 ================= -->
+    <section id="stats" class="stats-row container" aria-label="Statistics"></section>
+
+    <!-- ================= 功能 ================= -->
+    <section id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker" data-i18n="features.kicker"></span>
+          <h2 data-i18n="features.title"></h2>
+          <p data-i18n="features.sub"></p>
+        </div>
+        <div class="features-grid" id="features-list"></div>
+      </div>
+    </section>
+
+    <!-- ================= 下载 ================= -->
+    <section id="download">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker" data-i18n="download.kicker"></span>
+          <h2 data-i18n="download.title"></h2>
+          <p data-i18n="download.sub"></p>
+        </div>
+
+        <div class="download-panel glass reveal">
+          <div class="dl-grid">
+            <div class="dl-left">
+              <span class="version-badge" id="version-badge"></span>
+              <div class="version-table" id="version-table"></div>
+            </div>
+            <div class="dl-stage glass" id="dl-stage" role="group" aria-label="Download"></div>
+          </div>
+
+          <div class="steps">
+            <h4 data-i18n="download.stepsTitle"></h4>
+            <div class="step-list" id="steps-list"></div>
+          </div>
+
+          <details class="changelog glass" id="changelog">
+            <summary></summary>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 截图 ================= -->
+    <section id="shots">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker" data-i18n="shots.kicker"></span>
+          <h2 data-i18n="shots.title"></h2>
+          <p data-i18n="shots.sub"></p>
+        </div>
+        <div class="shots-grid" id="shots-list"></div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker" data-i18n="faq.kicker"></span>
+          <h2 data-i18n="faq.title"></h2>
+        </div>
+        <div class="faq-list" id="faq-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= 页脚 ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-glass glass reveal">
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+          </span>
+          <span>Cloudreve <em style="font-style:normal;opacity:.7">Android</em></span>
+        </div>
+        <div class="footer-links" id="footer-links"></div>
+        <p class="footer-note" id="footer-note"></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 移动端悬浮下载按钮 -->
+  <button class="btn btn-primary float-download" id="float-download" type="button">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+    <span>APK</span>
+  </button>
+</body>
+</html>
