@@ -16,10 +16,10 @@ window.SITE_CONFIG = {
     title:  { zh: "Cloudreve Android 客户端", en: "Cloudreve Android Client" },
     pageTitle: { zh: "Cloudreve Android {version}", en: "Cloudreve Android {version}" },
     description: {
-      zh: "Cloudreve 自托管云盘的原生 Android 客户端 1.10.0：多账号隔离、10 种存储策略上传、断点续传与 AES-256-CTR 加密、全格式预览与 Readium/Media3 播放、回收站/后台任务/远程下载/WebDAV、SSE 实时同步与小米超级岛沉浸。",
-      en: "Native Android client 1.10.0 for self-hosted Cloudreve: isolated multi-account, 10 storage policies, resumable AES-256-CTR transfers, full-format preview with Readium/Media3, Trash/Tasks/Remote/WebDAV, SSE realtime sync and Xiaomi Super Island."
+      zh: "Cloudreve 自托管云盘的原生 Android 客户端 1.10.1：多账号隔离、10 种存储策略上传、断点续传与 AES-256-CTR 加密、全格式预览与 Readium/Media3 播放、回收站/后台任务/远程下载/WebDAV、SSE 实时同步与小米超级岛沉浸。",
+      en: "Native Android client 1.10.1 for self-hosted Cloudreve: isolated multi-account, 10 storage policies, resumable AES-256-CTR transfers, full-format preview with Readium/Media3, Trash/Tasks/Remote/WebDAV, SSE realtime sync and Xiaomi Super Island."
     },
-    keywords: "Cloudreve, Android, 客户端, 网盘, 自托管, APK, 1.10.0, Client, self-hosted, cloud, WebDAV, SSE",
+    keywords: "Cloudreve, Android, 客户端, 网盘, 自托管, APK, 1.10.1, Client, self-hosted, cloud, WebDAV, SSE",
     github: "",
     releaseUrl: "",
     homepage: "https://cloudreve.org/",
@@ -35,7 +35,7 @@ window.SITE_CONFIG = {
    * 版本信息（version 区块）
    * ------------------------------------------------------------------ */
   version: {
-    current: "1.10.0",
+    current: "1.10.1",
     code: 11000,
     minSdk: 24,
     targetSdk: 37,
@@ -45,7 +45,7 @@ window.SITE_CONFIG = {
     badge: { zh: "最新版本", en: "LATEST" },
     changelog: [
       {
-        version: "1.10.0",
+        version: "1.10.1",
         date: "2026-09-04",
         items: {
           zh: [
@@ -124,9 +124,9 @@ window.SITE_CONFIG = {
    * ------------------------------------------------------------------ */
   downloads: [
     {
-      file: "downloads/Cloudreve-1.10.0-release-arm64-v8a.apk",
+      file: "https://github.com/XTAI9/cdapk-down/releases/download/Release/Cloudreve-1.10.1-release-arm64-v8a.apk",
       abi: "arm64-v8a",
-      size: "30.6 MB",
+      size: "30.7 MB",
       sha256: "",
       note: {
         zh: "适用于 2020 年后的绝大多数 Android 手机（骁龙 / 天玑 / 麒麟 / Exynos），单包 arm64-v8a",
@@ -139,7 +139,7 @@ window.SITE_CONFIG = {
    * 1.10 聚焦：首屏 What's New 胶囊（渲染于 Hero 顶部）
    * ------------------------------------------------------------------ */
   whatsNew: {
-    badge: { zh: "1.10.0 新版", en: "NEW 1.10.0" },
+    badge: { zh: "1.10.1 新版", en: "NEW 1.10.1" },
     title: {
       zh: "回收站 · 后台任务 · 远程下载 · WebDAV 全量上线",
       en: "Trash · Tasks · Remote Download · WebDAV — all in"
@@ -155,7 +155,7 @@ window.SITE_CONFIG = {
    * 顶部数字条
    * ------------------------------------------------------------------ */
   stats: [
-    { value: "1.10.0",   label: { zh: "当前版本",           en: "Current version" } },
+    { value: "1.10.1",   label: { zh: "当前版本",           en: "Current version" } },
     { value: "10",       label: { zh: "种存储策略上传",      en: "Storage policies" } },
     { value: "11",       label: { zh: "类文件预览 + 播放",   en: "Preview & playback" } },
     { value: "37",       label: { zh: "目标 API / 自适应三档布局", en: "Target API / 3 adaptive layouts" } }
@@ -291,7 +291,7 @@ window.SITE_CONFIG = {
   installSteps: [
     {
       title: { zh: "下载 APK", en: "Download the APK" },
-      desc:  { zh: "点击下方按钮下载 arm64-v8a 安装包（30.6 MB）。", en: "Tap below to grab the arm64-v8a APK (30.6 MB)." }
+      desc:  { zh: "点击下方按钮下载 arm64-v8a 安装包（30.7 MB）。", en: "Tap below to grab the arm64-v8a APK (30.7 MB)." }
     },
     {
       title: { zh: "允许安装", en: "Allow installation" },
@@ -326,7 +326,7 @@ window.SITE_CONFIG = {
       }
     },
     {
-      q: { zh: "1.10.0 新增了什么？", en: "What’s new in 1.10.0?" },
+      q: { zh: "1.10.1 新增了什么？", en: "What’s new in 1.10.1?" },
       a: {
         zh: "全量补齐：回收站与后台任务中心、远程离线下载中心、WebDAV 独立管理；预览矩阵与安全（Tink 保险库）加固；SSE 实时同步与小米超级岛 / Promoted 通知沉浸；体验上目录记忆与分页预取等细节打磨，详见上方更新日志。",
         en: "Full coverage: Trash & Tasks, Remote Download hub, WebDAV manager; preview & security (Tink vault) hardened; SSE realtime & Super Island / Promoted immersion; per-dir memory & pagination polish — see changelog above."
@@ -399,7 +399,7 @@ window.SITE_CONFIG = {
       "nav.download": "下载",
       "nav.faq": "常见问题",
 
-      "hero.keyword": "1.10.0 · 全量能力补齐",
+      "hero.keyword": "1.10.1 · 全量能力补齐",
       "hero.title1": "原生 Cloudreve",
       "hero.title2": "Android 客户端",
       "hero.tagline": "回收站与后台任务、远程离线下载、WebDAV 独立管理已上线——多账号隔离、10 种存储策略、SSE 实时同步与小米超级岛沉浸，一站式接管你的 Cloudreve v4。",
@@ -411,7 +411,7 @@ window.SITE_CONFIG = {
 
       "features.kicker": "功能特性",
       "features.title": "为 Cloudreve 打造完整能力",
-      "features.sub": "1.10.0 全量补齐：从传输与预览到回收站与远程下载，每一环原生打磨。",
+      "features.sub": "1.10.1 全量补齐：从传输与预览到回收站与远程下载，每一环原生打磨。",
 
       "download.kicker": "下载安装",
       "download.title": "获取最新版本",
@@ -452,7 +452,7 @@ window.SITE_CONFIG = {
       "nav.download": "Download",
       "nav.faq": "FAQ",
 
-      "hero.keyword": "1.10.0 · Full coverage",
+      "hero.keyword": "1.10.1 · Full coverage",
       "hero.title1": "Native Cloudreve",
       "hero.title2": "Android Client",
       "hero.tagline": "Trash & Tasks, Remote Download and WebDAV are here — isolated multi-account, 10 policies, SSE realtime & Super Island in one client for Cloudreve v4.",
@@ -464,7 +464,7 @@ window.SITE_CONFIG = {
 
       "features.kicker": "FEATURES",
       "features.title": "Everything your Cloudreve needs",
-      "features.sub": "1.10.0 full coverage — from transfer & preview to trash & remote download, all native.",
+      "features.sub": "1.10.1 full coverage — from transfer & preview to trash & remote download, all native.",
 
       "download.kicker": "DOWNLOAD",
       "download.title": "Get the latest build",
