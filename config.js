@@ -140,7 +140,7 @@ window.SITE_CONFIG = {
    * ------------------------------------------------------------------ */
   downloads: [
     {
-      file: "https://github.com/XTAI9/cdapk-down/releases/download/Release/Cloudreve-1.10.1-release-arm64-v8a.apk",
+      file: "https://github.com/XTAI9/cdapk-down/releases/download/1.10.1/Cloudreve-1.10.1-release-arm64-v8a.apk",
       abi: "arm64-v8a",
       size: "30.7 MB",
       sha256: "",
