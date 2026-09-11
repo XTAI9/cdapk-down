@@ -16,12 +16,12 @@ window.SITE_CONFIG = {
     title:  { zh: "Cloudreve Android 客户端", en: "Cloudreve Android Client" },
     pageTitle: { zh: "Cloudreve Android {version}", en: "Cloudreve Android {version}" },
     description: {
-      zh: "Cloudreve 自托管云盘的原生 Android 客户端 1.10.1：多账号隔离、10 种存储策略上传、断点续传与 AES-256-CTR 加密、全格式预览与 Readium/Media3 播放、回收站/后台任务/远程下载/WebDAV、SSE 实时同步与小米超级岛沉浸。",
-      en: "Native Android client 1.10.1 for self-hosted Cloudreve: isolated multi-account, 10 storage policies, resumable AES-256-CTR transfers, full-format preview with Readium/Media3, Trash/Tasks/Remote/WebDAV, SSE realtime sync and Xiaomi Super Island."
+      zh: "Cloudreve 自托管云盘的原生 Android 客户端 1.10.1：多账号隔离、10 种存储策略上传、断点续传与 AES-256-CTR 加密、全格式预览与 Readium/Media3 播放、回收站/后台任务/远程下载/WebDAV、SSE 实时同步与小米超级岛沉浸、更好的页面设计。",
+      en: "Native Android client 1.10.1 for self-hosted Cloudreve: isolated multi-account, 10 storage policies, resumable AES-256-CTR transfers, full-format preview with Readium/Media3, Trash/Tasks/Remote/WebDAV, SSE realtime sync and Xiaomi Super Island, better deaign"
     },
     keywords: "Cloudreve, Android, 客户端, 网盘, 自托管, APK, 1.10.1, Client, self-hosted, cloud, WebDAV, SSE",
-    github: "",
-    releaseUrl: "",
+    github: "https://github.com/XTAI9/cdapk-down/",
+    releaseUrl: "https://github.com/XTAI9/cdapk-down/releases/tag/1.10.1",
     homepage: "https://cloudreve.org/",
     isThirdParty: true,
     copyright: { zh: "Cloudreve Android 客户端", en: "Cloudreve Android Client" },
@@ -344,8 +344,8 @@ window.SITE_CONFIG = {
     {
       q: { zh: "1.10.1 新增了什么？", en: "What’s new in 1.10.1?" },
       a: {
-        zh: "全量补齐：回收站与后台任务中心、远程离线下载中心、WebDAV 独立管理；预览矩阵与安全（Tink 保险库）加固；SSE 实时同步与小米超级岛 / Promoted 通知沉浸；体验上目录记忆与分页预取等细节打磨，详见上方更新日志。",
-        en: "Full coverage: Trash & Tasks, Remote Download hub, WebDAV manager; preview & security (Tink vault) hardened; SSE realtime & Super Island / Promoted immersion; per-dir memory & pagination polish — see changelog above."
+        zh: "部分功能完善与页面设计改进等细节改进，详见上方更新日志。",
+        en: "Some features have been improved and the design has been updated, see the update log above for details."
       }
     },
     {
@@ -358,8 +358,8 @@ window.SITE_CONFIG = {
     {
       q: { zh: "服务器必须使用 HTTPS 吗？", en: "Does my server need HTTPS?" },
       a: {
-        zh: "不需要。考虑到自托管场景，客户端允许明文 HTTP（适合内网 / 局域网），HTTPS 证书验证照常严格进行；服务端需 ≥4.12.0。",
-        en: "No. HTTP is allowed for self-hosted / LAN scenarios; HTTPS certificate verification remains strict; server ≥4.12.0 required."
+        zh: "是的。考虑到自托管场景，尽管客户端允许明文 HTTP（适合内网 / 局域网），但我们依然建议保持使用 HTTPS 协议，HTTPS 证书验证照常严格进行；服务端需 ≥4.12.0。",
+        en: "Yes. For self-hosted deployments, although the client allows plaintext HTTP (suitable for intranet/LAN use), we still recommend continuing to use HTTPS. HTTPS certificate verification continues to be strictly enforced as usual. Server version ≥ 4.12.0 is required."
       }
     },
     {
