@@ -60,6 +60,7 @@ window.SITE_CONFIG = {
           ]
         }
       },
+      {
         version: "1.10.0",
         date: "2026-09-04",
         items: {
