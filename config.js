@@ -358,8 +358,8 @@ window.SITE_CONFIG = {
     {
       q: { zh: "服务器必须使用 HTTPS 吗？", en: "Does my server need HTTPS?" },
       a: {
-        zh: "是的。考虑到自托管场景，尽管客户端允许明文 HTTP（适合内网 / 局域网），但我们依然建议保持使用 HTTPS 协议，HTTPS 证书验证照常严格进行；服务端需 ≥4.12.0。",
-        en: "Yes. For self-hosted deployments, although the client allows plaintext HTTP (suitable for intranet/LAN use), we still recommend continuing to use HTTPS. HTTPS certificate verification continues to be strictly enforced as usual. Server version ≥ 4.12.0 is required."
+        zh: "不需要。考虑到自托管场景，客户端允许明文 HTTP（适合内网 / 局域网），HTTPS 证书验证照常严格进行；服务端需 ≥4.12.0。",
+        en: "No. HTTP is allowed for self-hosted / LAN scenarios; HTTPS certificate verification remains strict; server ≥4.12.0 required."
       }
     },
     {
