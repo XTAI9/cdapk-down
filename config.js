@@ -41,12 +41,12 @@ window.SITE_CONFIG = {
     targetSdk: 37,
     minLabel: { zh: "Android 7.0 (API 24)", en: "Android 7.0 (API 24)" },
     targetLabel: { zh: "Android 17 (API 37)", en: "Android 17 (API 37)" },
-    releaseDate: "2026-09-11",
+    releaseDate: "2026-09-12",
     badge: { zh: "最新版本", en: "LATEST" },
     changelog: [
       {
         version: "1.10.1",
-        date: "2026-09-11",
+        date: "2026-09-12",
         items: {
           zh: [
             "全面优化弹窗设计，支持内联错误提示",
