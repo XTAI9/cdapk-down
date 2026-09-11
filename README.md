@@ -1,6 +1,6 @@
 # Cloudreve Android 客户端 · 官网
 
-Liquid Glass（iOS 26 风格）设计语言的静态官网，零依赖、零构建、零后端。当前版本 **1.10.0 (11000)** 全量能力已上线。
+Liquid Glass（iOS 26 风格）设计语言的静态官网，零依赖、零构建、零后端。当前版本 **1.10.1 (11000)** 全量能力已上线。
 
 ![tech](https://img.shields.io/badge/stack-HTML%2FCSS%2FJS-6366f1) ![deps](https://img.shields.io/badge/dependencies-0-22d3ee)
 
@@ -82,8 +82,8 @@ server {
 
 ## 日常维护（只改 config.js）
 
-**当前版本**：`1.10.0 (11000)` · `2026-09-04` · `targetSdk 37 / minSdk 24 / arm64-v8a`  
-**1.10.0 聚焦**：回收站与后台任务中心、远程离线下载、WebDAV 独立管理、SSE 实时同步与小米超级岛沉浸
+**当前版本**：`1.10.1 (11001)` · `2026-09-11` · `targetSdk 37 / minSdk 24 / arm64-v8a`  
+**1.10.1 聚焦**：文件解压缩功能与压缩包预览功能体验改进
 
 **发布新版本**：只需改 `config.js` 中的 `version.current / code / releaseDate`，并把新 APK 放入 `downloads/` 后更新文件名；在 `changelog` 数组顶部追加新条目；`features` 中可用 `badge` 标记 NEW。
 
