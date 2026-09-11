@@ -36,16 +36,31 @@ window.SITE_CONFIG = {
    * ------------------------------------------------------------------ */
   version: {
     current: "1.10.1",
-    code: 11000,
+    code: 11001,
     minSdk: 24,
     targetSdk: 37,
     minLabel: { zh: "Android 7.0 (API 24)", en: "Android 7.0 (API 24)" },
     targetLabel: { zh: "Android 17 (API 37)", en: "Android 17 (API 37)" },
-    releaseDate: "2026-09-04",
+    releaseDate: "2026-09-11",
     badge: { zh: "最新版本", en: "LATEST" },
     changelog: [
       {
         version: "1.10.1",
+        date: "2026-09-11",
+        items: {
+          zh: [
+            "全面优化弹窗设计，支持内联错误提示",
+            "全面改进文件解压缩功能，功能更完善",
+            "全面改进压缩包预览页面设计，更优雅"
+          ],
+          en: [
+            "Fully optimized the pop-up design with support for inline error messages",
+            "Fully improved the file decompression feature with more complete functionality",
+            "Fully improved the archive preview page design for a more elegant look"
+          ]
+        }
+      },
+        version: "1.10.0",
         date: "2026-09-04",
         items: {
           zh: [
